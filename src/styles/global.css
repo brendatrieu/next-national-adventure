@@ -5,3 +5,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+p,
+h2 {
+  font-family: var(--font-oswald);
+}

@@ -1,14 +1,17 @@
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
+import { Oswald, Source_Sans_3 } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+export const oswald = Oswald({
+  weight: ['400', '500'],
+  subsets: ['latin'],
+  variable: '--font-oswald',
+});
+export const sourceSans3 = Source_Sans_3({
+  weight: ['400', '500'],
+  subsets: ['latin'],
+  variable: '--font-sourcesans3',
+});
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      hello
-    </main>
-  );
+  return <main className={oswald.className}>hello</main>;
 }
