@@ -1,3 +1,9 @@
+:root {
+  --font-oswald: '__Oswald_2ce2ed', '__Oswald_Fallback_2ce2ed';
+  --font-sourcesans3: '__Source_Sans_3_f40c17',
+    '__Source_Sans_3_Fallback_f40c17';
+}
+
 body {
   margin: 0;
 }
@@ -6,7 +12,10 @@ body {
   box-sizing: border-box;
 }
 
-p,
 h2 {
   font-family: var(--font-oswald);
+}
+
+p {
+  font-family: var(--font-sourcesans3);
 }
