@@ -12,10 +12,14 @@ $padding-large: 0 10rem;
   padding: $padding-small;
 
   @media (min-width: $small-screen) {
-    padding: $padding-medium;
+    padding: $padding-small;
   }
 
   @media (min-width: $medium-screen) {
+    padding: $padding-medium;
+  }
+
+  @media (min-width: $large-screen) {
     padding: $padding-large;
   }
 }

@@ -1,0 +1,43 @@
+@use '../../../styles/base';
+@use '../../../styles/variables';
+
+.parkCard {
+  margin: 1.5rem auto;
+  background-color: white;
+  border-radius: 0.3rem;
+  h2 {
+    color: black;
+  }
+}
+
+.image {
+  overflow: hidden;
+}
+
+.parkDetails {
+  @extend .flex-column-justify-center;
+  padding: 1rem;
+}
+
+.parkHeader {
+  @extend .flex-row-align-center;
+  justify-content: space-between;
+}
+
+@media (min-width: variables.$small-screen) {
+  .image {
+    height: 15rem;
+  }
+}
+
+@media (min-width: variables.$medium-screen) {
+  .image {
+    height: 20rem;
+  }
+}
+
+@media (min-width: variables.$large-screen) {
+  .image {
+    height: 25rem;
+  }
+}

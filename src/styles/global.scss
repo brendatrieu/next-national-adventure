@@ -1,3 +1,5 @@
+@use './base';
+
 :root {
   --font-oswald: '__Oswald_8ac6c0', '__Oswald_Fallback_8ac6c0';
   --font-sourcesans3: '__Source_Sans_3_f40c17',
@@ -13,8 +15,14 @@ body {
   font-family: var(--font-oswald);
 }
 
-h2 {
+h2,
+h3 {
   margin: 0;
+}
+
+h2 {
+  color: base.$font-color;
+  font-size: 2rem;
 }
 
 p {

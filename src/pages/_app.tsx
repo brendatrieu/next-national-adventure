@@ -1,4 +1,4 @@
-import '../styles/global.css';
+import '../styles/global.scss';
 import type { AppProps } from 'next/app';
 import MainLayout from '@/components/layout/MainLayout/MainLayout';
 import { Oswald, Source_Sans_3 } from 'next/font/google';
