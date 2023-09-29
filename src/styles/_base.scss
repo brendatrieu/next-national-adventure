@@ -1,0 +1,16 @@
+@import './variables';
+
+// -- Colors --
+$body-bg-color: #3c5233;
+$nav-bg-color: #264027;
+$font-color: #fefae0;
+$accent-color: #dda15e;
+
+.responsive-padding {
+  @include responsive-padding;
+}
+
+.flex-row-align-center {
+  display: flex;
+  align-items: center;
+}
