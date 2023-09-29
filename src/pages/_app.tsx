@@ -4,7 +4,7 @@ import MainLayout from '@/components/layout/MainLayout/MainLayout';
 import { Oswald, Source_Sans_3 } from 'next/font/google';
 
 export const oswald = Oswald({
-  weight: '400',
+  weight: '300',
   subsets: ['latin'],
 });
 export const sourceSans3 = Source_Sans_3({

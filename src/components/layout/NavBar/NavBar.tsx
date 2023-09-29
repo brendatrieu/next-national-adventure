@@ -1,9 +1,24 @@
 import styles from './NavBar.module.scss';
+import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <nav>
-      <h2>National Adventures</h2>
+    <nav className={styles.navbar}>
+      <Link href={'/'} className={styles.logo}>
+        <h2>National Adventures</h2>
+      </Link>
+      <ul>
+        <li>
+          <Link href={'/'} className={styles.logo}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link href={'/favorites'} className={styles.logo}>
+            Favorites
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }

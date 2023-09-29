@@ -1,0 +1,21 @@
+// -- Breakpoints --
+$small-screen: 640px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+
+// -- Padding --
+$padding-small: 0 2.5rem;
+$padding-medium: 0 5rem;
+$padding-large: 0 10rem;
+
+@mixin responsive-padding {
+  padding: $padding-small;
+
+  @media (min-width: $small-screen) {
+    padding: $padding-medium;
+  }
+
+  @media (min-width: $medium-screen) {
+    padding: $padding-large;
+  }
+}
