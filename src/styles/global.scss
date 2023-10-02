@@ -1,4 +1,5 @@
 @use './base';
+@import './variables';
 
 :root {
   --font-oswald: '__Oswald_8ac6c0', '__Oswald_Fallback_8ac6c0';
@@ -26,6 +27,7 @@ h2 {
 }
 
 p {
+  @include responsive-p;
   font-family: var(--font-sourcesans3);
   margin: 0;
   font-weight: 300;

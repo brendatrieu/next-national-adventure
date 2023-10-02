@@ -13,8 +13,6 @@ export const sourceSans3 = Source_Sans_3({
   variable: '--font-sourcesans3',
 });
 
-console.log(sourceSans3.style.fontFamily);
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <MainLayout>

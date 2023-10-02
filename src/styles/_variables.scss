@@ -23,3 +23,24 @@ $padding-large: 0 10rem;
     padding: $padding-large;
   }
 }
+
+// -- Paragraphs --
+$p-small: 0.95rem;
+$p-medium: 1rem;
+$p-large: 1.05rem;
+
+@mixin responsive-p {
+  font-size: $p-small;
+
+  @media (min-width: $small-screen) {
+    font-size: $p-small;
+  }
+
+  @media (min-width: $medium-screen) {
+    font-size: $p-medium;
+  }
+
+  @media (min-width: $large-screen) {
+    font-size: $p-large;
+  }
+}
