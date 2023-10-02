@@ -19,9 +19,20 @@
   padding: 1rem;
 }
 
-.parkHeader {
+.parkDetailsHeader {
   @extend .flex-row-align-center;
   justify-content: space-between;
+}
+
+.parkDetailsBody {
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+.moreInfo {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (min-width: variables.$small-screen) {

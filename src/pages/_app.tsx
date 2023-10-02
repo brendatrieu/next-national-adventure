@@ -8,10 +8,12 @@ export const oswald = Oswald({
   subsets: ['latin'],
 });
 export const sourceSans3 = Source_Sans_3({
-  weight: '400',
+  weight: ['300', '400'],
   subsets: ['latin'],
   variable: '--font-sourcesans3',
 });
+
+console.log(sourceSans3.style.fontFamily);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

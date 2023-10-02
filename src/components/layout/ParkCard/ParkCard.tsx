@@ -17,16 +17,24 @@ export default function ParkCard() {
         />
       </div>
       <div className={styles.parkDetails}>
-        <div className={styles.parkHeader}>
+        <div className={styles.parkDetailsHeader}>
           <h2>Main Street</h2>
           <IconButton />
         </div>
-        <p>
-          A street located upon the main entrance of Disneyland. Both sides of
-          the street are lined with shops filled with food, drinks, and
-          merchandise.
-        </p>
-        <Button type="button" label={'More Info'} />
+        <div className={styles.parkDetailsBody}>
+          <p>
+            A street located upon the main entrance of Disneyland. Both sides of
+            the street are lined with shops filled with food, drinks, and
+            merchandise. A street located upon the main entrance of Disneyland.
+            Both sides of the street are lined with shops filled with food,
+            drinks, and merchandise. A street located upon the main entrance of
+            Disneyland. Both sides of the street are lined with shops filled
+            with food, drinks, and merchandise.
+          </p>
+          <div className={styles.moreInfo}>
+            <Button type="button" label={'More Info'} />
+          </div>
+        </div>
       </div>
     </div>
   );
