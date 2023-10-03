@@ -5,6 +5,7 @@
   margin: 1.5rem auto;
   background-color: white;
   border-radius: 0.3rem;
+  min-width: 325px;
   h2 {
     color: black;
   }
@@ -16,7 +17,7 @@
 
 .parkDetails {
   @extend .flex-column-justify-center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .parkDetailsHeader {
@@ -26,7 +27,7 @@
 
 .parkDetailsBody {
   p {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
   }
 }
 
