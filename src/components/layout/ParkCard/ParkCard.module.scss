@@ -6,18 +6,28 @@
   background-color: white;
   border-radius: 0.3rem;
   min-width: 325px;
+  display: flex;
+  flex-direction: column;
+
   h2 {
     color: black;
   }
 }
 
+.imageDiv {
+  width: 100%;
+}
+
 .image {
-  overflow: hidden;
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 100%;
 }
 
 .parkDetails {
   @extend .flex-column-justify-center;
   padding: 1.5rem;
+  width: 100%;
 }
 
 .parkDetailsHeader {
@@ -36,20 +46,16 @@
   justify-content: flex-end;
 }
 
-@media (min-width: variables.$small-screen) {
-  .image {
-    height: 15rem;
+@media screen and (min-width: variables.$medium-screen) {
+  .parkCard {
+    flex-direction: row;
   }
-}
 
-@media (min-width: variables.$medium-screen) {
-  .image {
-    height: 20rem;
+  .imageDiv {
+    width: 40%;
   }
-}
 
-@media (min-width: variables.$large-screen) {
-  .image {
-    height: 25rem;
+  .parkDetails {
+    width: 60%;
   }
 }

@@ -5,15 +5,13 @@ import Button from '@/components/Button/Button';
 
 export default function ParkCard() {
   return (
-    <div className={styles.parkCard}>
-      <div className={styles.image}>
+    <section className={styles.parkCard}>
+      <div className={styles.imageDiv}>
         <Image
           alt={'main street'}
+          fill
           src={'/images/main-street.jpeg'}
-          width={300}
-          height={200}
-          layout="responsive"
-          style={{ marginBottom: 0 }}
+          className={styles.image}
         />
       </div>
       <div className={styles.parkDetails}>
@@ -36,6 +34,6 @@ export default function ParkCard() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
