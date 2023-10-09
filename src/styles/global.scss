@@ -1,11 +1,15 @@
+@use './base';
+@import './variables';
+
 :root {
   --font-oswald: '__Oswald_8ac6c0', '__Oswald_Fallback_8ac6c0';
-  --font-sourcesans3: '__Source_Sans_3_f40c17',
-    '__Source_Sans_3_Fallback_f40c17';
+  --font-sourcesans3: '__Source_Sans_3_e03783',
+    '__Source_Sans_3_Fallback_e03783';
 }
 
 body {
   margin: 0;
+  min-width: 400px;
 }
 
 * {
@@ -13,13 +17,21 @@ body {
   font-family: var(--font-oswald);
 }
 
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
+h2 {
+  @include responsive-h2;
+  color: base.$font-color;
+}
+
 p {
+  @include responsive-p;
   font-family: var(--font-sourcesans3);
   margin: 0;
+  font-weight: 300;
 }
 
 a {

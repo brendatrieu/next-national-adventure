@@ -14,3 +14,9 @@ $accent-color: #dda15e;
   display: flex;
   align-items: center;
 }
+
+.flex-column-justify-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

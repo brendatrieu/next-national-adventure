@@ -1,0 +1,11 @@
+@use '../../styles/base';
+
+.button {
+  background-color: base.$accent-color;
+  color: base.$font-color;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1.1rem;
+}

@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className={styles.navbar}>
       <Link href={'/'} className={styles.logo}>
-        <h2>National Adventures</h2>
+        <h3>National Adventures</h3>
       </Link>
       <ul>
         <li>

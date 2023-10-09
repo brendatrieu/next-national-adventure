@@ -1,0 +1,68 @@
+@use '../../../styles/base';
+@use '../../../styles/variables';
+
+.parkCard {
+  margin: 1.5rem auto;
+  background-color: white;
+  border-radius: 0.3rem;
+  min-width: 325px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: black;
+  }
+}
+
+.imageDiv {
+  width: 100%;
+  min-height: 200px;
+  position: relative;
+}
+
+.image {
+  border-radius: 0.3rem 0.3rem 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parkDetails {
+  @extend .flex-column-justify-center;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.parkDetailsHeader {
+  @extend .flex-row-align-center;
+  justify-content: space-between;
+}
+
+.parkDetailsBody {
+  p {
+    margin: 0.75rem 0;
+  }
+}
+
+.moreInfo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: variables.$medium-screen) {
+  .parkCard {
+    flex-direction: row;
+  }
+
+  .imageDiv {
+    width: 40%;
+  }
+
+  .image {
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+
+  .parkDetails {
+    width: 60%;
+  }
+}

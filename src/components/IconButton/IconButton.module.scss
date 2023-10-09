@@ -1,0 +1,6 @@
+@use '../../styles/base';
+
+.iconButton {
+  transform: scale(1.6);
+  color: base.$accent-color;
+}

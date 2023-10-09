@@ -12,10 +12,56 @@ $padding-large: 0 10rem;
   padding: $padding-small;
 
   @media (min-width: $small-screen) {
-    padding: $padding-medium;
+    padding: $padding-small;
   }
 
   @media (min-width: $medium-screen) {
+    padding: $padding-medium;
+  }
+
+  @media (min-width: $large-screen) {
     padding: $padding-large;
+  }
+}
+
+// -- H2 --
+$h2-small: 1.75rem;
+$h2-medium: 1.85rem;
+$h2-large: 2rem;
+
+@mixin responsive-h2 {
+  font-size: $h2-small;
+
+  @media (min-width: $small-screen) {
+    font-size: $h2-small;
+  }
+
+  @media (min-width: $medium-screen) {
+    font-size: $h2-medium;
+  }
+
+  @media (min-width: $large-screen) {
+    font-size: $h2-large;
+  }
+}
+
+// -- Paragraphs --
+$p-small: 0.95rem;
+$p-medium: 1rem;
+$p-large: 1.05rem;
+
+@mixin responsive-p {
+  font-size: $p-small;
+
+  @media (min-width: $small-screen) {
+    font-size: $p-small;
+  }
+
+  @media (min-width: $medium-screen) {
+    font-size: $p-medium;
+  }
+
+  @media (min-width: $large-screen) {
+    font-size: $p-large;
   }
 }
