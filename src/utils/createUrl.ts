@@ -1,17 +1,15 @@
-const createApiUrl = ({
-  obj,
-}: {
-  obj: {
-    parkCode?: string | string[];
-    stateCode?: string | string[];
-    limit?: string | string[];
-    start?: string | string[];
-    q?: string | string[];
-  };
-}) => {
+interface ApiParams {
+  parkCode?: string[];
+  stateCode?: string[];
+  limit?: number;
+  start?: number;
+  q?: string[];
+}
+
+const createApiUrl = ({ obj }: { obj: ApiParams }) => {
   const urlStart = 'http://developer.nps.gov/api/v1/parks?';
   const urlEnd = '&api_key=tZEBxgl9PvWVA6IoZ6geyHDasBEnQ1XwFNc8lbeo';
-  const apiObj = {
+  const apiObj: { [key: string]: string } = {
     parkCode: '',
     stateCode: '',
     limit: '',
@@ -19,25 +17,33 @@ const createApiUrl = ({
     q: '',
   };
   let apiParams = '';
-  for (const key in obj) {
-    if (Object.hasOwn(apiObj, key) === false) {
+  const objKeys = Object.keys(obj);
+
+  for (const key of objKeys) {
+    if (!apiObj.hasOwnProperty(key)) {
       return;
     }
-    if (typeof obj[key] === 'object') {
-      obj[key].sort((a, b) => {
+
+    const paramValue = obj[key as keyof ApiParams] as string | string[];
+
+    if (typeof paramValue === 'object') {
+      paramValue.sort((a: string, b: string) => {
         if (a < b) {
           return -1;
         }
+
         if (a > b) {
           return 1;
         }
+
         return 0;
       });
-      apiObj[key] = obj[key].join(',');
+      apiObj[key] = paramValue.join(',') as string;
     } else {
-      apiObj[key] = obj[key];
+      apiObj[key] = paramValue;
     }
   }
+
   for (const param in apiObj) {
     if (apiObj[param] !== '') {
       apiParams += `&${param + '=' + apiObj[param]}`;
