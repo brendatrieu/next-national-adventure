@@ -6,9 +6,7 @@ interface ApiParams {
   q?: string[];
 }
 
-const createApiUrl = ({ obj }: { obj: ApiParams }) => {
-  const urlStart = 'http://developer.nps.gov/api/v1/parks?';
-  const urlEnd = '&api_key=tZEBxgl9PvWVA6IoZ6geyHDasBEnQ1XwFNc8lbeo';
+const createApiUrl = (obj: ApiParams): string => {
   const apiObj: { [key: string]: string } = {
     parkCode: '',
     stateCode: '',
@@ -21,7 +19,7 @@ const createApiUrl = ({ obj }: { obj: ApiParams }) => {
 
   for (const key of objKeys) {
     if (!apiObj.hasOwnProperty(key)) {
-      return;
+      return '';
     }
 
     const paramValue = obj[key as keyof ApiParams] as string | string[];
@@ -50,7 +48,8 @@ const createApiUrl = ({ obj }: { obj: ApiParams }) => {
     }
   }
 
-  return encodeURIComponent(urlStart + apiParams + urlEnd);
+  const urlStart = 'http://developer.nps.gov/api/v1/parks?';
+  return encodeURIComponent(urlStart + apiParams + process.env.API_KEY);
 };
 
 export default createApiUrl;
