@@ -1,12 +1,13 @@
 interface ApiParams {
   parkCode?: string[];
   stateCode?: string[];
-  limit?: number;
-  start?: number;
+  limit?: string;
+  start?: string;
   q?: string[];
 }
 
 const createApiUrl = (obj: ApiParams): string => {
+  // debugger;
   const apiObj: { [key: string]: string } = {
     parkCode: '',
     stateCode: '',
@@ -49,7 +50,7 @@ const createApiUrl = (obj: ApiParams): string => {
   }
 
   const urlStart = 'http://developer.nps.gov/api/v1/parks?';
-  return encodeURIComponent(urlStart + apiParams + process.env.API_KEY);
+  return `${urlStart}${apiParams}&api_key=${process.env.NEXT_PUBLIC_API_KEY}`;
 };
 
 export default createApiUrl;

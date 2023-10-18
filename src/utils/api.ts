@@ -4,8 +4,8 @@ export async function getAllParks({
   start,
   limit,
 }: {
-  start?: number;
-  limit?: number;
+  start?: string;
+  limit?: string;
 }) {
   const path = createApiUrl({ start, limit });
   const response = await fetch(path);
