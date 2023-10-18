@@ -1,11 +1,18 @@
 @use './../../../styles/base';
 
-.navbar {
-  @extend .responsive-padding, .flex-row-align-center;
+.container {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 4rem;
   margin: 0;
   background-color: base.$nav-bg-color;
+}
+
+.navbar {
+  @extend .responsive-padding, .flex-row-align-center;
+  width: 100%;
+  max-width: 1500px;
   justify-content: space-between;
   ul {
     display: flex;

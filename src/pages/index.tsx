@@ -6,7 +6,7 @@ export default function Home() {
   const [parks, setParks] = useState<[]>([]);
 
   useEffect(() => {
-    getAllParks({ start: 0, limit: 2 }).then((res) => {
+    getAllParks({ start: 0, limit: 10 }).then((res) => {
       setParks(res.data);
     });
   }, []);

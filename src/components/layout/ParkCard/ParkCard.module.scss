@@ -66,3 +66,9 @@
     width: 60%;
   }
 }
+
+@media screen and (min-width: variables.$large-screen) {
+  .imageDiv {
+    min-height: 250px;
+  }
+}

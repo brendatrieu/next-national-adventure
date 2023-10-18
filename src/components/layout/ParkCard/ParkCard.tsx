@@ -10,6 +10,7 @@ export default function ParkCard() {
         <Image
           alt={'main street'}
           fill
+          sizes="100%"
           src={'/images/main-street.jpeg'}
           className={styles.image}
         />
