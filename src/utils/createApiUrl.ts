@@ -1,13 +1,12 @@
 interface ApiParams {
   parkCode?: string[];
   stateCode?: string[];
-  limit?: string;
-  start?: string;
+  limit?: number;
+  start?: number;
   q?: string[];
 }
 
 const createApiUrl = (obj: ApiParams): string => {
-  // debugger;
   const apiObj: { [key: string]: string } = {
     parkCode: '',
     stateCode: '',

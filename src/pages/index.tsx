@@ -6,7 +6,7 @@ export default function Home() {
   const [parks, setParks] = useState<[]>([]);
 
   useEffect(() => {
-    getAllParks({ start: '0', limit: '2' }).then((res) => {
+    getAllParks({ start: 0, limit: 2 }).then((res) => {
       setParks(res.data);
     });
   }, []);
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <h2 style={{ paddingTop: '1rem' }}>National Parks</h2>
-      {parks.length &&
+      {parks &&
         parks.map((park) => {
           return <ParkCard />;
         })}
