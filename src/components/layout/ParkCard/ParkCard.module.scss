@@ -28,7 +28,6 @@
 }
 
 .parkDetails {
-  @extend .flex-column-justify-center;
   padding: 1.5rem;
   width: 100%;
 }
@@ -38,9 +37,10 @@
   justify-content: space-between;
 }
 
-.parkDetailsBody {
+.description {
   p {
     margin: 0.75rem 0;
+    max-height: 100%;
   }
 }
 
@@ -64,5 +64,11 @@
 
   .parkDetails {
     width: 60%;
+  }
+}
+
+@media screen and (min-width: variables.$large-screen) {
+  .imageDiv {
+    min-height: 250px;
   }
 }

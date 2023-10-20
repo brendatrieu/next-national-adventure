@@ -1,10 +1,4 @@
-interface ApiParams {
-  parkCode?: string[];
-  stateCode?: string[];
-  limit?: number;
-  start?: number;
-  q?: string[];
-}
+import { ApiParams } from '@/models/ApiModels';
 
 const createApiUrl = (obj: ApiParams): string => {
   const apiObj: { [key: string]: string } = {
